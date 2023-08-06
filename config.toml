@@ -1,0 +1,64 @@
+baseURL = "https://klayu.github.io/t4/"
+title = "BLOG : t4"
+publishDir = "public"
+enableRobotsTXT = true
+theme = "blist"
+#googleAnalytics = "G-xxxxxx"
+#disqusShortname = "t4"
+DefaultContentLanguage = "en"
+DefaultContentLanguageInSubdir = true
+[languages]
+  [languages.en]
+    contentDir = "content/en"
+    weight = 1
+    languageName = "English"
+    [languages.en.params]
+      introTitle = "Hey! Im Katheryn Fox"
+      introSubtitle = "26 y/o junior developer who enjoys social card games, blogging and painting"
+      introPhoto = "/picture.jpg"
+      logo = "/blist-logo.png"
+    [[languages.en.menu.main]]
+        name = "Blog"
+        url = "blog"
+        weight = 1
+    [[languages.en.menu.main]]
+        name = "Tags"
+        url = "tags"
+        weight = 2
+[params]
+  darkModeToggle = true
+  enableSearch = true
+    searchKeys = [
+      "tags",
+      "date",
+      "categories",
+      "summary",
+      "content",
+      "link",
+      "author"
+    ]
+  copyright = "Copyright © 2023 - t4 · All rights reserved"
+  favicon = "/favicon.svg"
+  ascentColor = "bg-blue-100"
+  frontBundle = "blog"
+  hideMeta = false
+  hideOtherLanguages = true
+  toc = false
+  hidePageThumbnail = false
+[build]
+  writeStats = true
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+[markup]
+  [markup.highlight]
+    style = "dracula"
+  [markup.goldmark.renderer]
+    unsafe = true
+[permalinks]
+  posts = "/:filename"
+  blog = "/:filename"
+  page = "/:filename"
+[sitemap]
+  changefreq = "monthly"
+  priority = 0.5
+  filename = "sitemap.xml"
