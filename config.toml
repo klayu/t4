@@ -1,6 +1,6 @@
 baseURL = "https://www.claydrop.com"
 metaDataFormat = "yaml"
-title = "BeaconStreet USA"
+title = "ClayDrop Research USA"
 theme = "blist"
 publishDir = "public"
 show_reading_time = true
@@ -13,6 +13,12 @@ DefaultContentLanguageInSubdir = false
 
 timeout = 60000
 
+[permalinks]
+  posts = "/:filename"
+  blog = "/:filename"
+  page = "/:filename"
+
+
 [taxonomies]
   tag = 'tag'
 
@@ -22,22 +28,22 @@ timeout = 60000
     weight = 1
     languageName = "English"
     [languages.en.params]
-      introTitle = "Hey! I'm Aria Fox"
-      introSubtitle = "Angelino who enjoys blogging and painting"
+      introTitle = "Hey! I'm Aria Smith"
+      introSubtitle = "Texan who enjoys blogging and painting"
       introPhoto = "/tpdne_poster.png"
       logo = "/blist-logo.png"
     [[languages.en.menu.main]]
         name = "Blog"
         url = "blog"
         weight = 1
-    [[languages.en.menu.main]]
-        name = "Category"
-        url = "category"
-        weight = 2
+#    [[languages.en.menu.main]]
+#        name = "Category"
+#        url = "category"
+#        weight = 2
     [[languages.en.menu.main]]
         name = "Tags"
         url = "tag"
-        weight = 3        
+        weight = 2
 #    [[languages.en.menu.main]]
 #        name = "Subscribe"
 #        url = "page/subscribe"
@@ -162,10 +168,7 @@ timeout = 60000
     style = "dracula"
   [markup.goldmark.renderer]
     unsafe = true
-[permalinks]
-  posts = "/:filename"
-  blog = "/:filename"
-  page = "/:filename"
+
 [sitemap]
   changefreq = "weekly"
   priority = 0.5
